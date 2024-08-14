@@ -1,0 +1,95 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@section Header {
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Amazon Clone</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Ecommerce Website</p>
+                </div>
+            </div>
+        </header>
+}
+
+@if(Model.Products.Count == 0)
+{
+    <h1>There's No Products to Show</h1>
+}
+
+@foreach(var product in Model.Products)
+{
+    <div class="col mb-5">
+        <div class="card h-100">
+            <!-- Sale badge-->
+            @if (product.Sale)
+            {
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+            }
+            <!-- Product image-->
+            <img class="card-img-top" src="@product.ImageUrl" alt="..." />
+            <!-- Product details-->
+            <div class="card-body p-4">
+                <div class="text-center">
+                    <!-- Product name-->
+                    <h5 class="fw-bolder">@product.Name</h5>
+                    <!-- Product reviews-->
+                    <div class="d-flex justify-content-center small text-warning mb-2">
+                        @for(int i=0;i < product.Stars; i++)
+                        {
+                            <div class="bi-star-fill"></div>
+                        }
+                    </div>
+                    <!-- Product price-->
+                    <span>@product.Price.ToString("C")</span>
+                </div>
+            </div>
+            <!-- Product actions-->
+            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                <form asp-action="AddToCart" asp-controller="Cart" asp-route-Id="@product.Id" method="POST">
+                      <div class="text-center"><button type="submit" class="btn btn-outline-dark mt-auto">Add to cart</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+@section CartCount{
+    @Model.CartCount
+}
+
+
+@section Cart {
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            @foreach(var item in Model.Cart.Products)
+            {
+                        <div class="card mb-3" style="max-width: 540px; max-height=200px">
+                          <div class="row g-0">
+                            <div class="col-md-4">
+                              <img src="@item.ImageUrl" class="img-fluid rounded-start" alt="@item.Name">
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                                <h5 class="card-title">@item.Name</h5>
+                                <p class="card-text">@item.Description</p>
+                                <p class="card-text" style="color=green">@item.Price.ToString("C")</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+            }
+            <h3>Total Price is : @Model.Cart.TotalPrice.ToString("C")</h3>
+          </div>
+          </div>
+        </div>
+}

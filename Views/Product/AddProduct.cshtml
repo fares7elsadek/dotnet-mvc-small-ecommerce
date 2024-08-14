@@ -1,0 +1,43 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "AddProduct";
+}
+
+<h1>Add Product Section</h1>
+
+<form asp-action="SaveAddProduct" method="POST">
+  <div class="mb-3">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" class="form-control" placeholder="Enter Product Name">
+  </div>
+  <div class="mb-3">
+    <label asp-for="Description"></label>
+    <input asp-for="Description" class="form-control" placeholder="Enter Product Description">
+  </div>
+  <div class="mb-3">
+    <label asp-for="Price"></label>
+    <input asp-for="Price" class="form-control" placeholder="Enter Product Price">
+  </div>
+  <div class="mb-3">
+    <label asp-for="ImageUrl"></label>
+    <input asp-for="ImageUrl" class="form-control" placeholder="Enter Product Image">
+  </div>
+  <div class="mb-3">
+    <label asp-for="Stars"></label>
+    <select asp-for="Stars">
+            @for(int i = 1; i <= 5; i++)
+            {
+                <option value="@i">@i</option>
+            }
+    </select>
+  </div>
+  <div class="mb-3 form-check">
+    <input asp-for="Sale" type="checkbox" class="form-check-input">
+    <label class="form-check-label" asp-for="Sale"></label>
+  </div>
+  <button type="submit" class="btn btn-primary">Add The Product</button>
+</form>
+
+@section CartCount{
+    @ViewBag.CartCount
+}
