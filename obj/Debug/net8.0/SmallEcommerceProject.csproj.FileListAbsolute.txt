@@ -67,7 +67,6 @@ C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debu
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\System.Runtime.Caching.dll
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\System.Security.Permissions.dll
-C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
@@ -129,7 +128,6 @@ C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debu
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\obj\Debug\net8.0\SmallEcommerceProject.csproj.AssemblyReference.cache
-C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\obj\Debug\net8.0\SmallEcommerceProject.csproj.CopyComplete
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
@@ -263,3 +261,10 @@ C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debu
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\obj\Debug\net8.0\SmallEcommerceProject.sourcelink.json
+C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\obj\Debug\net8.0\SmallEco.959A0847.Up2Date
+C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\fares\source\repos\SmallEcommerceProject\SmallEcommerceProject\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

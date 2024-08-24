@@ -6,21 +6,26 @@
 <h1>Add Product Section</h1>
 
 <form asp-action="SaveAddProduct" method="POST">
+  <div asp-validation-summary="All"></div>
   <div class="mb-3">
     <label asp-for="Name"></label>
     <input asp-for="Name" class="form-control" placeholder="Enter Product Name">
+    <span asp-validation-for="Name" class="text-danger"></span>
   </div>
   <div class="mb-3">
     <label asp-for="Description"></label>
     <input asp-for="Description" class="form-control" placeholder="Enter Product Description">
+        <span asp-validation-for="Description" class="text-danger"></span>
   </div>
   <div class="mb-3">
     <label asp-for="Price"></label>
     <input asp-for="Price" class="form-control" placeholder="Enter Product Price">
+    <span asp-validation-for="Price" class="text-danger"></span>
   </div>
   <div class="mb-3">
     <label asp-for="ImageUrl"></label>
     <input asp-for="ImageUrl" class="form-control" placeholder="Enter Product Image">
+    <span asp-validation-for="ImageUrl" class="text-danger"></span>
   </div>
   <div class="mb-3">
     <label asp-for="Stars"></label>
@@ -30,6 +35,7 @@
                 <option value="@i">@i</option>
             }
     </select>
+    <span asp-validation-for="Stars" class="text-danger"></span>
   </div>
   <div class="mb-3 form-check">
     <input asp-for="Sale" type="checkbox" class="form-check-input">
@@ -41,3 +47,10 @@
 @section CartCount{
     @ViewBag.CartCount
 }
+
+@section Cart {
+    <partial name="_CartPartial" model="@ViewBag.Cart" />
+}
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<partial name="_ValidationScriptsPartial" />

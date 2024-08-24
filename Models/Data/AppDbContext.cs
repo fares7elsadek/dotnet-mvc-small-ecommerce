@@ -1,12 +1,22 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using SmallEcommerceProject.Models.Data.config;
 using System;
 namespace SmallEcommerceProject.Models.Data
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<Cart> Carts { get; set; }
+
+        public AppDbContext()
+        {
+            
+        }
+        public AppDbContext(DbContextOptions options):base(options)
+        {
+            
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -16,12 +26,6 @@ namespace SmallEcommerceProject.Models.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            var configurations = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
-                .Build();
-
-            var constr = configurations.GetSection("constr").Value;
-            optionsBuilder.UseSqlServer(constr);
         }
     }
 }

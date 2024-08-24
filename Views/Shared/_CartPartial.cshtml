@@ -1,0 +1,30 @@
+﻿@model Cart
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        @foreach (var item in Model.Products)
+        {
+            <div class="card mb-3" style="max-width: 540px; max-height=200px">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="@item.ImageUrl" class="img-fluid rounded-start" alt="@item.Name">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Name</h5>
+                            <p class="card-text">@item.Description</p>
+                            <p class="card-text" style="color:green">@item.Price.ToString("C")</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <h3>Total Price is : @Model.TotalPrice.ToString("C")</h3>
+    </div>
+</div>
+
